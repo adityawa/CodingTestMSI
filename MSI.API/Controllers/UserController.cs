@@ -137,6 +137,13 @@ namespace MSI.API.Controllers
                
         }
 
+        [HttpGet]
+        [Route("TestAPI")]
+        public bool TestAPI()
+        {
+            return _context.Database.CanConnect();
+        }
+
 
     }
 }
